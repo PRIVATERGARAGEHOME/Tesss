@@ -1,0 +1,86 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport"/>
+  <title>
+   Product Page
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+ </head>
+ <body class="bg-white text-gray-900">
+  <div class="max-w-md mx-auto border-b border-gray-200">
+   <!-- Header -->
+   <header class="flex items-center justify-between px-4 py-3">
+    <button aria-label="Back" class="text-gray-700 text-2xl focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-gray-500 rounded">
+     <i class="fas fa-arrow-left">
+     </i>
+    </button>
+    <div class="flex space-x-6 text-gray-700 text-xl">
+     <button aria-label="Menu" class="focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-gray-500 rounded">
+      <i class="fas fa-bars">
+      </i>
+     </button>
+    </div>
+   </header>
+   <!-- Product Image -->
+   <div class="relative">
+    <img alt="White office chair with headrest and wheels placed in a modern office setting with large windows and a desk with a computer monitor" class="w-full object-cover" height="600" src="https://storage.googleapis.com/a1aa/image/b005b5c8-6885-43eb-b66d-b51bd2bc8e49.jpg" width="600"/>
+   </div>
+   <!-- Promo Bar -->
+   <div class="bg-black text-white font-semibold px-4 py-2">
+    PGH SHOP
+   </div>
+   <!-- Price Section -->
+   <div class="flex items-center space-x-2 px-4 py-3 bg-gradient-to-r from-white to-black/10">
+    <span class="text-black font-extrabold text-lg flex items-center">
+     <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M9 14l2-2m0 0l2-2m-2 2v6m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round">
+      </path>
+     </svg>
+     Rp 20.000
+    </span>
+    <span class="line-through text-gray-500 text-sm">
+     Rp25.000
+    </span>
+    <span class="text-black font-bold text-sm">
+     5%
+    </span>
+   </div>
+   <!-- Product Title -->
+   <p class="px-4 py-3 text-gray-900 text-base leading-snug">
+    Riri BG772 Kursi headrest Kursi Roda Kursi Kantor Kursi Belajar - BG758
+      BIRU
+   </p>
+   <!-- Action Buttons -->
+   <div class="flex items-center space-x-3 px-4 pb-4">
+    <button aria-label="Chat" class="border border-gray-400 rounded-lg p-2 text-gray-700 text-lg flex items-center justify-center w-12 h-12 focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-gray-500">
+     <i class="far fa-comment-alt">
+     </i>
+    </button>
+    <button class="flex-1 border border-black rounded-lg py-3 text-black font-bold text-base focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-black">
+     Beli
+    </button>
+   </div>
+  </div>
+ 
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const nama = urlParams.get('nama') || 'Nama Produk';
+  const harga = urlParams.get('harga') || '20000';
+  const gambar = urlParams.get('gambar') || 'https://storage.googleapis.com/a1aa/image/b005b5c8-6885-43eb-b66d-b51bd2bc8e49.jpg';
+
+  document.querySelector('img').src = gambar;
+  document.querySelector('p.text-gray-900').textContent = nama;
+  document.querySelector('span.text-black.font-extrabold').innerHTML = `<svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 14l2-2m0 0l2-2m-2 2v6m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round"/></svg> Rp ` + harga;
+</script>
+</body>
+
+</html>
